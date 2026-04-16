@@ -8,6 +8,7 @@ from launch.substitutions import Command, FindExecutable, PathJoinSubstitution, 
 
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
+from ament_index_python import get_package_share_directory
 
 
 def generate_launch_description():
@@ -64,12 +65,15 @@ def generate_launch_description():
         output="both",
         parameters=[robot_description],
     )
+    
+    bbot_rviz_file = os.path.join(get_package_share_directory("bbot_description"), "rviz", "bbot_model.rviz")
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
         name="rviz2",
         output="log",
         condition=IfCondition(gui),
+        arguments= ["-d",bbot_rviz_file]
     )
 
     nodes = [
