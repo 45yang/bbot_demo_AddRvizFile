@@ -1,11 +1,19 @@
 # bbot_demo
-步骤和视频中一样：
 
-1.编译包：
-colcon build
+本项目代码来自 Bilibili 视频：[【ros2_control教程】](https://www.bilibili.com/video/BV1ku411G7UR)
 
-2. 刷新系统环境变量
-source ./install/setup.bash
+## 系统环境
+- Ubuntu 22.04
+- ROS2 Humble
 
-3.运行launch文件
-ros2 launch bbot_description bbot.launch.py
+## 编译与运行
+所有文件已在 Humble 下编译测试通过，可直接运行。
+
+## 新增内容
+- **Rviz 配置文件**：启动后可直接显示机器人模型，无需手动添加 Display 类型。
+
+## 说明
+其他 package 中的 `launch` 文件、`config` 文件等均与视频中博主使用的文件名相同。
+
+## 注意事项
+如果使用 Windows 系统克隆此仓库，可能因文件名包含特殊字符（如 `>`）导致检出失败，建议在 WSL 或 Linux 下操作。
