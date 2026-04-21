@@ -1,4 +1,4 @@
-### 本项目代码来自 Bilibili 视频：[【ros2_control教程】](https://www.bilibili.com/video/BV1ku411G7UR)
+## 本项目代码来自 Bilibili 视频：[【ros2_control教程】](https://www.bilibili.com/video/BV1ku411G7UR)
 
 ## 系统环境
 - Ubuntu 22.04
